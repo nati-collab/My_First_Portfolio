@@ -1,122 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Natnael's Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Natnael Girma - Personal Portfolio</title>
   <style>
-    .learners-table-container {
-      margin-top: 20px;
-      padding: 15px;
-      background: #f9f9f9;
+    /* Basic styling for layout and readability */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0 20px;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    header, nav, section, article, footer {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 10px;
+      background: white;
       border-radius: 8px;
       box-shadow: 0 0 8px rgba(0,0,0,0.1);
     }
 
-    .learners-table-container h2 {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #333;
-      margin-bottom: 10px;
-      text-align: center;
+    header h1 {
+      margin-bottom: 5px;
+      font-size: 2.5rem;
+      color: #2c3e50;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-family: Arial, sans-serif;
+    header p {
+      font-style: italic;
+      color: #555;
     }
 
-    thead {
-      background-color: #4CAF50;
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      background-color: #34495e;
+      border-radius: 8px;
+    }
+
+    nav ul li a {
       color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      display: block;
+      font-weight: bold;
+      border-radius: 6px;
+      transition: background-color 0.3s;
     }
 
-    th, td {
-      padding: 12px 15px;
-      border: 1px solid #ddd;
+    nav ul li a:hover,
+    nav ul li a:focus {
+      background-color: #1abc9c;
+      outline: none;
+    }
+
+    section h2 {
+      border-bottom: 2px solid #1abc9c;
+      padding-bottom: 5px;
+      color: #16a085;
+    }
+
+    article.project {
+      margin-top: 15px;
+      padding: 10px;
+      border-left: 4px solid #1abc9c;
+      background-color: #eafaf9;
+      border-radius: 6px;
+    }
+
+    article.project h3 {
+      margin-top: 0;
+      color: #117a65;
+    }
+
+    article.project a {
+      color: #16a085;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    article.project a:hover {
+      text-decoration: underline;
+    }
+
+    footer p {
       text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      padding: 10px 0;
     }
 
-    tbody tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-
-    tbody tr:hover {
-      background-color: #d1e7dd;
-      cursor: pointer;
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="tweets.html">Tweets</a></li>
-    </ul>
+    <h1>Natnael Girma</h1>
+    <p>Passionate Web Developer | Climate Tech Enthusiast | Lifelong Learner</p>
   </header>
 
-  <main>
-    <article>
-      <h1>Welcome to My First Portfolio</h1>
-      <p>This is the beginning of my journey into web development!</p> 
+  <nav>
+    <ul>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-      <h2>About me</h2>
-      <p>My name is Natnael Girma</p>
+  <section id="introduction">
+    <h2>Introduction</h2>
+    <p>
+      Hello! I'm Natnael, a freshman student and aspiring software engineer passionate about using technology to solve real-world problems, especially in climate change and sustainability. Welcome to my personal portfolio where I showcase my journey, projects, and skills.
+    </p>
+  </section>
 
-      <h3>What I'm learning</h3>
-      <p>Now I'm learning basics of HTML</p>
-      <p>This page gets updated from time to time, so stay tuned!</p>
+  <section id="projects">
+    <h2>Projects</h2>
 
-      <a href="https://www.alxafrica.com/" target="_blank">
-        <img src="https://i.ibb.co/gTDZZT8/ALX-Logo-07.png" alt="ALX-Logo" width="200"/>
-      </a>
-
-      <!-- Learners Table -->
-      <div class="learners-table-container">
-        <h2>Meet Some of Our Learners</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Age</th>
-              <th>Country</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>John</td>
-              <td>25</td>
-              <td>USA</td>
-            </tr>
-            <tr>
-              <td>Emily</td>
-              <td>28</td>
-              <td>Canada</td>
-            </tr>
-            <tr>
-              <td>Michael</td>
-              <td>32</td>
-              <td>Australia</td>
-            </tr>
-            <tr>
-              <td>Sophia</td>
-              <td>21</td>
-              <td>UK</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
+    <article class="project">
+      <h3>Carbon Footprint Tracker</h3>
+      <p>A wearable device project that tracks personal carbon emissions and provides real-time feedback to encourage sustainable choices.</p>
+      <a href="https://github.com/NatiGirma/Carbon-Footprint-Tracker" target="_blank" rel="noopener noreferrer">View Project</a>
     </article>
 
-    <aside>
-      <p>placeholder to add comment thread later</p>
-    </aside>
-  </main>
+    <article class="project">
+      <h3>My First Portfolio Website</h3>
+      <p>My personal portfolio website built using HTML and CSS to showcase my skills, projects, and contact information.</p>
+      <a href="https://github.com/NatiGirma/My_First_Portfolio" target="_blank" rel="noopener noreferrer">View Project</a>
+    </article>
+
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am currently a freshman student focused on learning software engineering, cloud computing, and AI. I enjoy coding, solving problems, and applying technology for sustainability.
+    </p>
+    <ul>
+      <li>Skills: HTML, CSS, Git, Basic JavaScript</li>
+      <li>Hobbies: Coding, Reading Tech Blogs, Hiking</li>
+      <li>Goal: Become a Sustainability Solutions Architect</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      Feel free to reach out to me via email or connect with me on LinkedIn and GitHub.
+    </p>
+    <ul>
+      <li>Email: <a href="mailto:natnael.girma@example.com">natnael.girma@example.com</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/natnael-girma" target="_blank" rel="noopener noreferrer">linkedin.com/in/natnael-girma</a></li>
+      <li>GitHub: <a href="https://github.com/NatiGirma" target="_blank" rel="noopener noreferrer">github.com/NatiGirma</a></li>
+    </ul>
+  </section>
 
   <footer>
-    <p>Made by Natnael Girma - <a href="https://github.com/NatiGirma" target="_blank">here</a></p>
+    <p>&copy; 2025 Natnael Girma</p>
   </footer>
+
 </body>
 </html>
-
